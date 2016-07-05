@@ -1,0 +1,107 @@
+@import "../themes/default.less";
+@button-namespace: vk-button;
+
+button.@{button-namespace}{
+  appearance: none;
+  border-radius: 4px;
+  border: 0;
+  box-sizing: border-box;
+  color: inherit;
+  display: block;
+  font-size: 18px;
+  height: 41px;
+  line-height: 18px;
+  margin: 0 0.2rem 0.2rem 0;
+  outline: 0;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+
+  // 做点击的遮罩
+  &::after {
+    background-color: #000;
+    content: " ";
+    opacity: 0;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &:not(.@{button-namespace}-disabled):active::after {
+    opacity: .4;
+  }
+
+
+  .@{button-namespace}-icon {
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+
+  &.@{button-namespace}-default {
+    color: @button-default-color;
+    background-color: @button-default-background-color;
+    box-shadow: @button-default-box-shadow;
+
+    &.@{button-namespace}-plain {
+      border: 1px solid @button-default-plain-color;
+      background-color: transparent;
+      box-shadow: none;
+      color: @button-default-plain-color;
+    }
+  }
+
+  &.@{button-namespace}-primary {
+    color: @button-primary-color;
+    background-color: @button-primary-background-color;
+
+    &.@{button-namespace}-plain {
+      border: 1px solid @button-primary-background-color;
+      background-color: transparent;
+      color: @button-primary-background-color;
+    }
+  }
+
+  &.@{button-namespace}-danger {
+    color: @button-danger-color;
+    background-color: @button-danger-background-color;
+
+    &.@{button-namespace}-plain {
+      border: 1px solid @button-danger-background-color;
+      background-color: transparent;
+      color: @button-danger-background-color;
+    }
+  }
+
+  &.@{button-namespace}-large {
+    display: inline-block;
+    font-size: 26px;
+    line-height: 26px;
+    height: 50px;
+    padding: 0 1rem;
+  }
+
+  &.@{button-namespace}-normal {
+    display: inline-block;
+    padding: 0 0.75rem;
+  }
+
+  &.@{button-namespace}-small {
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 0.75rem;
+    line-height: 2rem;
+    height: 33px;
+  }
+
+  &.@{button-namespace}-block {
+    display: block;
+    width: 100%;
+  }
+
+  &.@{button-namespace}-disabled {
+    opacity: .6;
+  }
+}

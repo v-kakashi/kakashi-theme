@@ -1,0 +1,19 @@
+{
+  "name": "kakashi-theme",
+  "version": "1.0.0",
+  "description": "kakashi-ui的皮肤包",
+  "main": "./src/index.less",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/v-kakashi/kakashi-theme.git"
+  },
+  "author": "limingmin <314407103@qq.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/v-kakashi/kakashi-theme/issues"
+  },
+  "homepage": "https://github.com/v-kakashi/kakashi-theme#readme"
+}
