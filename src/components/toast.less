@@ -1,0 +1,54 @@
+@import "./icon.less";
+@import "./button.less";
+
+@toast-namespace: vk-toast;
+
+.@{toast-namespace} {
+  position: fixed;
+  max-width: 80%;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  box-sizing: border-box;
+  text-align: center;
+  z-index: 1000;
+
+  .@{toast-namespace}-icon {
+    display: block;
+    text-align: center;
+    font-size: 56px;
+    color: #fff;
+  }
+
+  .@{toast-namespace}-text {
+    font-size: 14px;
+    display: block;
+    text-align: center;
+  }
+
+  &.@{toast-namespace}-placetop {
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  &.@{toast-namespace}-placemiddle {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.@{toast-namespace}-placebottom {
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  &.@{toast-namespace}-transition {
+    transition: opacity .3s linear;
+  }
+
+  &.@{toast-namespace}-enter, &.@{toast-namespace}-leave {
+    opacity: 0;
+  }
+}
