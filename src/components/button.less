@@ -1,4 +1,5 @@
 @import "../themes/default.less";
+@import "../mixins/pre.less";
 @button-namespace: vk-button;
 
 button.@{button-namespace}{
@@ -7,6 +8,7 @@ button.@{button-namespace}{
   border: 0;
   box-sizing: border-box;
   color: inherit;
+  .pre(user-select,none);
   display: block;
   font-size: 18px;
   height: 41px;
