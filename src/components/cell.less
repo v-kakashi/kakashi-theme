@@ -2,9 +2,8 @@
 @import "./border.less";
 @import "./icon.less";
 
-@cell-namespace: vk-cell;
 
-.@{cell-namespace}{
+.vk-cell{
    .border-top(@color-grey);
    .border-bottom(@color-grey);
    text-decoration: none;
@@ -18,7 +17,7 @@
    overflow: hidden;
    padding: 16px 10px;
    position: relative;
-   & + .@{cell-namespace}::after {
+   & + .vk-cell::after {
      content: none;
    }
    &::before {
@@ -26,9 +25,7 @@
      right: 10px;
      width: auto;
    }
-   &:last-child::before {
-     left: 0;
-   }
+
    &-mask {
      &::after {
        background-color: #000;
@@ -46,20 +43,22 @@
      }
    }
    &-body {
-     display: flex;
+     display: -webkit-box;
      font-size: 14px;
-     margin-top: 14px;
+     margin-top: 10px;
      align-items: flex-end;
    }
    &-label {
      color: @cell-value-label;
      display: block;
      flex: 1;
+     -webkit-box-flex: 1;
    }
    img {
      vertical-align: middle;
    }
    &-title {
+     display: -webkit-box;
      flex: 1;
      vertical-align: middle;
      color: @cell-value-title;
@@ -73,10 +72,13 @@
    }
    &-text {
      flex: 1;
+    -webkit-user-select: none;
      line-height: 18px;
+     margin-top: 4px;
    }
    &-icon {
      width: 22px;
      color: @border-color
    }
 }
+.vk-field .vk-cell::after{content: initial;}
