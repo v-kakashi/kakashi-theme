@@ -1,0 +1,140 @@
+@import "./mask.less";
+
+.vk-msgbox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  background-color: #fff;
+  width: 85%;
+  border-radius: 3px;
+  font-size: 16px;
+  -webkit-user-select: none;
+  overflow: hidden;
+  opacity: 1;
+  z-index: 1001;
+  backface-visibility: hidden;
+}
+.vk-msgbox-header{
+  padding: 15px 20px 5px 10px;
+  border-bottom: 1px solid #ddd;
+}
+.vk-msgbox-content {
+  padding: 10px 20px;
+  min-height: 36px;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+}
+.vk-msgbox-close {
+  display: inline-block;
+  position: absolute;
+  top: 14px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  line-height: 20px;
+  text-align: center;
+}
+.vk-msgbox-input > input {
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  padding: 4px 5px;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+.vk-msgbox-errormsg {
+  color: red;
+  font-size: 12px;
+  min-height: 16px;
+}
+.vk-msgbox-title {
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+.vk-msgbox-status {
+  float: left;
+  width: 36px;
+  height: 36px;
+  font-size: 36px !important;
+}
+.vk-msgbox-status.icon-success {
+  color: #94c852;
+}
+.vk-msgbox-status.icon-warning {
+  color: #ff9c00;
+}
+.vk-msgbox-status.icon-error {
+  color: #ff4248;
+}
+.vk-msgbox-message {
+  color: #333;
+  font-size: 16px;
+  line-height: 36px;
+  margin-left: 36px;
+  margin-right: 36px;
+  text-align: center;
+}
+.vk-msgbox-btns {
+  display: flex;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+}
+.vk-msgbox-btn {
+  display: block;
+  background-color: #fff;
+  border: 0;
+  flex: 1;
+  margin: 0;
+  border-radius: 0;
+}
+.vk-msgbox-btn:active {
+  background-color: #3492e9;
+  color: #fff;
+  outline: none;
+}
+.vk-msgbox-btn:focus {
+  outline: none;
+}
+.vk-msgbox-confirm {
+  width: 50%;
+}
+.vk-msgbox-cancel {
+  width: 50%;
+  border-right: 1px solid #ddd;
+}
+.vk-msgbox-confirm-highlight,
+.vk-msgbox-cancel-highlight {
+  font-weight: 800;
+}
+.vk-msgbox-btns-reverse {
+  -webkit-box-direction: reverse;
+}
+.vk-msgbox-btns-reverse .vk-msgbox-confirm {
+  border-right: 1px solid #ddd;
+}
+.vk-msgbox-btns-reverse .vk-msgbox-cancel {
+  border-right: 0;
+}
+
+
+.pop-bounce-transition {
+  transition: .2s .1s;
+}
+.pop-bounce-enter {
+  opacity: 0;
+  transform: translate3d(-50%, -50%, 0) scale(0.7);
+}
+.pop-bounce-leave {
+  opacity: 0;
+  transform: translate3d(-50%, -50%, 0) scale(0.9);
+}
