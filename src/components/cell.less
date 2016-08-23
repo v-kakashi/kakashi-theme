@@ -1,6 +1,7 @@
 @import "../themes/default.less";
 @import "./border.less";
 @import "./icon.less";
+@import "../mixins/mask.less";
 
 
 .vk-cell{
@@ -27,20 +28,7 @@
    }
 
    &-mask {
-     &::after {
-       background-color: #000;
-       content: " ";
-       opacity: 0;
-       cursor: pointer;
-       position: absolute;
-       top: 0;
-       right: 0;
-       bottom: 0;
-       left: 0;
-     }
-     &:active::after {
-       opacity: .1;
-     }
+     .mask(0.1)
    }
    &-body {
      display: -webkit-box;

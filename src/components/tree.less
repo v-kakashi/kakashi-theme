@@ -1,6 +1,8 @@
 @import "./icon.less";
 @import "./image.less";
+@import "../mixins/mask.less";
 
+@namespace: vk;
 @tree-namespace: vk-tree;
 
 .vk-tree{ background: #fff; margin: 0; padding: 0; }
@@ -41,7 +43,10 @@
   overflow: hidden;
   -webkit-box-flex: 1;
 }
-.@{tree-namespace}-node{ padding: 8px 10px; display: -webkit-box; align-items: center; }
+.@{tree-namespace}-node {
+  padding: 8px 10px; display: -webkit-box; align-items: center; position: relative;
+  .mask(0.1)
+}
 .@{tree-namespace}-title{ color: #333;}
 .@{tree-namespace}-subtitle{ color: #999;}
 
