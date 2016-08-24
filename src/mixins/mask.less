@@ -1,4 +1,5 @@
 // 遮罩
+// 在低版本的 android ::after 阻止元素孩子节点的单击事件
 .mask(@opacity) {
   &::after {
     background-color: #000;
@@ -13,5 +14,6 @@
   }
   &:active::after {
     opacity: @opacity;
+    display: block;
   }
 }

@@ -45,8 +45,15 @@
 }
 .@{tree-namespace}-node {
   padding: 8px 10px; display: -webkit-box; align-items: center; position: relative;
-  .mask(0.1)
+  -webkit-box-align: center;
+
+  &:active {
+    background-color: #eee;
+    cursor: pointer;
+  }
 }
+
+
 .@{tree-namespace}-title{ color: #333;}
 .@{tree-namespace}-subtitle{ color: #999;}
 
