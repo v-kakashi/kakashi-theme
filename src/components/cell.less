@@ -16,7 +16,7 @@
    font-size: 16px;
    line-height: 1;
    overflow: hidden;
-   padding: 16px 10px;
+   padding: 15px 10px;
    position: relative;
    & + .vk-cell::after {
      content: none;
@@ -32,12 +32,12 @@
    }
    &-body {
      display: -webkit-box;
-     font-size: 14px;
-     margin-top: 10px;
+     color: #999;
+     font-size: 12px;
+     margin-top: 13px;
      align-items: flex-end;
    }
    &-label {
-     color: @cell-value-label;
      display: block;
      flex: 1;
      -webkit-box-flex: 1;
@@ -48,23 +48,30 @@
    &-title {
      display: -webkit-box;
      flex: 1;
-     vertical-align: middle;
      color: @cell-value-title;
-     // display: flex;
-     align-items: center;
    }
-   &-value {
-     color: @cell-value-color;
-     display: flex;
-     align-items: center;
+   &-value-warp{
+     display: -webkit-box;
+    -webkit-box-flex: 1;
+    -webkit-box-align: center;
+
+    &-value {
+      color: @cell-value-color;
+      display: flex;
+      align-items: center;
+    }
    }
+
    &-text {
      flex: 1;
      word-wrap: break-word;
      width: 100%;
     -webkit-user-select: none;
      line-height: 18px;
-     margin-top: 4px;
+     white-space: nowrap;
+      text-overflow: ellipsis;
+      -webkit-text-overflow: ellipsis;
+      overflow: hidden;
    }
    &-icon {
      width: 22px;

@@ -51,7 +51,7 @@ button.@{button-namespace}{
       border: 1px solid @button-default-plain-color;
       background-color: transparent;
       box-shadow: none;
-      color: @button-default-plain-color;
+      color: #38adff;
     }
   }
 
@@ -60,9 +60,9 @@ button.@{button-namespace}{
     background-color: @button-primary-background-color;
 
     &.@{button-namespace}-plain {
-      border: 1px solid @button-primary-background-color;
+      border: 1px solid @button-default-plain-color;
       background-color: transparent;
-      color: @button-primary-background-color;
+      color: #38adff;
     }
   }
 
@@ -71,7 +71,7 @@ button.@{button-namespace}{
     background-color: @button-danger-background-color;
 
     &.@{button-namespace}-plain {
-      border: 1px solid @button-danger-background-color;
+      border: 1px solid @button-default-plain-color;
       background-color: transparent;
       color: @button-danger-background-color;
     }
@@ -104,6 +104,8 @@ button.@{button-namespace}{
   }
 
   &.@{button-namespace}-disabled {
-    opacity: .6;
+    background: #fff;
+    color: #ccc;
+    box-shadow: 0 0 1px #ccc;
   }
 }
