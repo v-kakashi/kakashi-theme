@@ -48,18 +48,21 @@
   -webkit-box-flex: 1;
 }
 .@{tree-namespace}-node {
-  padding: 8px 10px; display: -webkit-box; align-items: center; position: relative;
+  padding: 0px 10px;
+  display: -webkit-box; align-items: center; position: relative;
   -webkit-box-align: center;
   cursor: pointer;
   &:active {
     background-color: #eee;
   }
+  .@{tree-namespace}-checkbox,.@{tree-namespace}-blank,.@{tree-namespace}-content,@{tree-namespace}-switcher{
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 }
-
-
+.@{tree-namespace}-blank{ height:22px; }
 .@{tree-namespace}-title{ color: #333;}
 .@{tree-namespace}-subtitle{ color: #999;}
-
 .@{tree-namespace} li ul { margin: 0; padding: 0; }
 
 .vk-tree-image{ margin-right: 10px; }
