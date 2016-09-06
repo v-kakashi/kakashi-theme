@@ -50,16 +50,15 @@
      flex: 1;
      color: @cell-value-title;
    }
-   &-value-warp{
-     display: -webkit-box;
-    -webkit-box-flex: 1;
-    -webkit-box-align: center;
 
-    &-value {
-      color: @cell-value-color;
-      display: flex;
-      align-items: center;
-    }
+   &-after.vk-icon,&-icon.vk-icon{
+     display: table;
+     height: 100%;
+
+     &:before{
+       display: table-cell;
+       vertical-align: middle;
+     }
    }
 
    &-text {
