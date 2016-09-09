@@ -1,6 +1,6 @@
 {
   "name": "kakashi-theme",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "kakashi-ui的皮肤包",
   "main": "./src/index.less",
   "scripts": {

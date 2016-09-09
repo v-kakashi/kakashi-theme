@@ -52,12 +52,13 @@
    }
 
    &-after.vk-icon,&-icon.vk-icon{
-     display: table;
+     position: relative;
      height: 100%;
 
      &:before{
-       display: table-cell;
-       vertical-align: middle;
+       position: absolute;
+       top: 50%;
+       margin-top: -8px;
      }
    }
 
