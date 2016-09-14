@@ -49,12 +49,19 @@
      display: -webkit-box;
      flex: 1;
      color: @cell-value-title;
-   }
-
-   &-after.vk-icon,&-icon.vk-icon{
      position: relative;
-     height: 100%;
+   }
+   &-title-icon{
+     padding-left: 20px;
+   }
+   &-title-after{
+     padding-right: 20px;
+   }
+   &-after.vk-icon{ right:0px; }
+   &-icon.vk-icon{ left:0px; }
+   &-after.vk-icon,&-icon.vk-icon{
      position: absolute;
+     height: 100%;
      top: 50%;
      margin-top: -8px;
    }
